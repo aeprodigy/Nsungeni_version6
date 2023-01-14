@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .22s linear;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+/*Header starts here*/
+header{
+    width:100%;
+    height: 80px;
+    background-color: #fefefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    color: #192a56;
+    
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    height: 60px;
+    margin-left: 2px;
+}
+.humburger{
+    display: none;
+    
+}
+/*HUMBURGER*/
+/*Humburger icon display for mobile starts here*/
+.humburger{
+    display: none;
+}
+/*HUMBURGER ENDS HERE*/
+.nav-bar ul{
+    display: flex;
+}
+nav ul li a{
+    display: block;
+    color: #192a56;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.red{
+    background-color:rgb(252, 48, 48);
+    color: #fefefe;
+}
+.red:hover{
+    background-color: transparent;
+    
+    color: rgb(252, 48, 48);
+}
+.nav-bar ul li a:hover{
+    background-color: #fefefe;
+    color: #192a56;
+}
+
+/*Header Ends here*/
+
+/*NAVBAR OR HEADER MEDIA QUERIES*/
+@media only screen and (max-width:1320px){
+    header{
+    padding: 0 50px;
+    }
+
+}
+
+@media only screen and (max-width:1100px){
+    header{
+    padding: 0 30px;
+   
+    }
+    
+}
+@media(max-width:1055px){
+    .humburger {
+        display: block;
+
+    }
+    .humburger .line1{
+       margin-top: 10px;
+    }
+    .humburger.line{
+        width: 30px;
+        height: 3px;
+        background-color: #192a56;
+        margin: 15px 0;
+    }
+    #humburger-icon{
+        display: block;
+        z-index: 2000; 
+    }
+    .nav-bar {
+        height: 0;
+         position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        overflow: hidden;
+        background-color:#192a56;
+        transition: 0.5s;
+    }
+    .nav-bar.active{
+        height: 100vh;
+
+    }
+    .nav-bar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        transition: 0.5s;
+        opacity: 0;
+    }
+     .nav-bar.active ul{
+        opacity: 1;
+     }
+    .nav-bar ul li{
+        margin-bottom: 25px;
+        top: 30px;
+    }
+    .logo img{
+        height: 40px;
+    }
+}
+/*NAVBAR OR HEADER MEDIA QUERIES*/
+
+/*HOME/HERO SECTION STARTS HERE*/
+.home{
+    
+    height: 100vh;
+}
+/*
+.home h1{
+    text-align: center;
+    font-size: 10rem;
+    color: white;
+}
+@media (max-width:750px) {
+    .home h1{
+       
+    text-align: center;
+    font-size: 7rem;
+    color: aliceblue;
+}
+}
+
+@media (max-width:710px) {
+    .home h1{
+       
+    text-align: center;
+    font-size: 5rem;
+    color: aliceblue;
+}
+    
+}
+*/
+/*SUPER SMALL PHONE SCREENS OF ABOUT 500-400PX*/
+/*@media (max-width:610px) {
+    .home h1{
+       
+    text-align: center;
+    font-size: 3rem;
+    color: aliceblue;
+   
+}
+    
+}
+*/
+/*MEDIA QUERIES ARE ABOVE THIS LINE*/
+.home{
+    background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0.014), rgba(0, 0, 0, 0.925)),  url(./background/belle-maluf-xupZLJZ1RB8-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home .title{
+    font-size: 10em;
+    color: #fefefe;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.home .mini-title{
+    font-size: 7em;
+    color: #fefefe;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.home h4{
+    font-size: 2em;
+    color: #fefefe;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.home button{
+    background-color:rgb(252, 48, 48);
+    color: #fefefe;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: none;
+    margin-top: 16px;
+}
+.home button a{
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 15px;
+}
+/*STICKY NAVBAR*/
+.sticky{
+    background-color: white;
+    box-shadow: rgba(0,0,0.09);
+     box-shadow: 10px 10px 25px rgba(0,0,0,0.2);
+    height: 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    color:#192a56;
+    position: fixed;
+     width:100%;
+    height: 80px;
+    background-color: #fefefe;
+    
+
+}
+/*STICKY NAVBAR ENDS HERE*/
+/*HOME LANDING PAGE MEDIA QUERIES*/
+@media (max-width:780px) {
+    .home{
+       
+    }
+    .home .title{
+        font-size: 7.5em;
+    }
+    
+.home .mini-title{
+    font-size: 4em;
+    color: #fefefe;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.home h4{
+    font-size: 2em;
+    color: aliceblue;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.home button{
+    background-color:rgb(252, 48, 48);
+    color: #fefefe;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: none;
+    margin-top: 16px;
+}
+.home button a{
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 15px;
+}
+}
+@media (max-width:680px) {
+    .home{
+       
+    }
+    .home .title{
+        font-size: 4.5em;
+    }
+
+    
+.home .mini-title{
+    font-size: 3em;
+    color: #fefefe;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.home h4{
+    font-size: 1em;
+    color: #fefefe;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.home button{
+    background-color:rgb(252, 48, 48);
+    color: #fefefe;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: none;
+    margin-top: 16px;
+}
+.home button a{
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 15px;
+}
+}
+
+@media (max-width:400px) {
+    .home .title{
+        font-size: 3rem;
+    }
+
+    
+.home .mini-title{
+    font-size: 2em;
+    color: #fefefe;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.home h4{
+    font-size: 0.7em;
+    color: #fefefe;
+    font-weight: 200;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.home button{
+    background-color:rgb(252, 48, 48);
+    color: #fefefe;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: none;
+    margin-top: 16px;
+}
+.home button a{
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 15px;
+}
+}
+.description{
+    height: 100vh;
+}
