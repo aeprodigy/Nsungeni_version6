@@ -16,7 +16,7 @@ header{
     background-color: #fefefe;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     padding: 0 100px;
     color: #192a56;
     
@@ -32,6 +32,7 @@ header{
 }
 .humburger{
     display: none;
+   
     
 }
 /*HUMBURGER*/
@@ -84,6 +85,8 @@ nav ul li a{
 @media(max-width:1055px){
     .humburger {
         display: block;
+        position: absolute;
+        top: 15px;
 
     }
     .humburger .line1{
@@ -91,9 +94,10 @@ nav ul li a{
     }
     .humburger .line{
         width: 30px;
-        height: 3px;
+        height: 4px;
         background-color: #192a56;
         margin: 6px 0;
+
     }
    
     .nav-bar {
